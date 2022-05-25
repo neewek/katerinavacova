@@ -73,6 +73,25 @@
           width: 100%;
           height: 100%;
       }
+      span {
+        display: inline-block;
+        animation-name: rotate;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(180deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
     </style>
   </head>
 
@@ -84,7 +103,7 @@
       </div>
       <div class="col">
         <div id="birthdayCard">
-          <h1>Happy Birthday, <span class="redText">Katerina</span>!</h1>
+          <h1>Happy Birthday, <span class="redText">Kateřina</span>!</h1>
           <p>You are <span class="redText">X</span> years old now.</p>
           <p>
             We sincerely wish you <strong>rizky s ryzou</strong> and
@@ -92,6 +111,7 @@
           </p>
           <p>You're a great person!</p>
           <p class="signature">–Your friends, the <span style="color: green;">Green</span><span style="color: purple;">Unicorns</span></p>
+        </div>
         <audio id="test" src="music.mp3" loop></audio>
       </div>
       <div class="col">
