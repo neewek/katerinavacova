@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <style>
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+      #birthdayCard {
+        background: black;
+        color: white;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        padding: 20px;
+      }
+
+      .redText {
+        color: red;
+      }
+
+      .signature {
+        text-align: right;
+      }
+
+      strong {
+        font-size: large;
+        color: #cc0000;
+      }
+
+      button {
+        border-radius: 50%;
+        margin: auto;
+        width: 200px;
+        height: 200px;
+        border: none;
+        color: white;
+        font-family: Avenir, Arial, sans-serif;
+        font-weight: 900;
+        font-size: 2.5rem;
+        background: red;
+        text-shadow: 0 3px 1px rgba(122, 17, 8, 0.8);
+        box-shadow: 0 8px 0 rgb(183, 9, 0), 0 15px 20px rgba(0, 0, 0, 0.35);
+        text-transform: uppercase;
+        transition: 0.4s all ease-in;
+        outline: none;
+        cursor: pointer;
+        text-align: center;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+
+      #hide {
+        opacity: 0;
+      }
+
+      #button {
+        margin-left: 45%;
+        margin-top: 15%;
+      }
+
+      #first {
+          background-color: black;
+          width: 100%;
+          height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="first"><button id="button" onclick="play()"><span>PARTY!</span></button></div>
+    <div id="hide" class="row">
+      <div class="col">
+        <img src="kataleft.gif" alt="lava kata" width="100%" />
+      </div>
+      <div class="col">
+        <div id="birthdayCard">
+          <h1>Happy Birthday, <span class="redText">Katerina</span>!</h1>
+          <p>You are <span class="redText">X</span> years old now.</p>
+          <p>
+            I sincerely wish you <strong>rizky s ryzou</strong> and
+            <strong>happiness</strong> in your future life.
+          </p>
+          <p>You're a great person!</p>
+          <p class="signature">–Your friend, Zbyshek</p>
+        </div>
+        <audio id="test" src="music.mp3" loop></audio>
+      </div>
+      <div class="col">
+        <img src="kataright.gif" alt="prava kata" width="100%" />
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+  <script>
+    if (window.matchMedia("(orientation: portrait)").matches) {
+      document.body.innerHTML =
+        '<center><h1 style="color:red;">Otoc telefon</h1><h4>a refreshni page</h4></center>';
+    }
+  </script>
+
+  <script>
+      window.scrollTo(0, 0);
+    function play() {
+      document.getElementById("test").play();
+      document.getElementById("button").style.display = "none";
+      document.getElementById("hide").style.opacity = 1;
+    }
+  </script>
+</html>
